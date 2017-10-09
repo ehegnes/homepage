@@ -1,0 +1,46 @@
+@import '~@angular/material/theming';
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$hegnes-app-primary: mat-palette($mat-blue-grey, 800, 700, 900);
+$hegnes-app-accent:  mat-palette($mat-blue);
+$hegnes-app-warn:    mat-palette($mat-orange);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$hegnes-app-theme: mat-light-theme($hegnes-app-primary, $hegnes-app-accent, $hegnes-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($hegnes-app-theme);
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-blue-grey, 800, 700, 900);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+.hegnes-dark-theme {
+  @include angular-material-theme($dark-theme);
+
+  @mixin material-mixins($theme) {
+    $accent: map-get($theme, accent);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+    $primary: map-get($theme, primary);
+
+    mat-sidenav-content,
+    mat-sidenav {
+      background-color: mat-color($primary, lighter) !important;
+      color: mat-color($foreground, text);
+    }
+
+    .mat-card {
+      background-color: mat-color($primary);
+    }
+  }
+
+  @include material-mixins($dark-theme);
+}

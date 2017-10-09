@@ -1,0 +1,40 @@
+<mat-toolbar color="primary"
+             class="app-toolbar mat-typography"
+             fxLayout
+             [class.hegnes-dark-theme]="isDark">
+  <button mat-icon-button (click)="mainmenu.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>Eric Hegnes&nbsp;<span>&#47;</span> <span>{{formattedRoute}}</span></h1>
+  <div fxFlex></div>
+  <button mat-icon-button
+       matTooltip="Toggle Theme"
+       (click)="toggleTheme()">
+    <mat-icon>invert_colors</mat-icon>
+  </button>
+  <button mat-icon-button
+       matTooltip="GitHub"
+       (click)="nav('https://github.com/ehegnes')">
+    <img class="mat-icon" src="/assets/gh.png">
+  </button>
+</mat-toolbar>
+<mat-sidenav-container [class.hegnes-dark-theme]="isDark">
+  <mat-sidenav #mainmenu mode="push">
+    <!-- sidenav content -->
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" (click)="mainmenu.close();">
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a mat-list-item routerLink="/résumé" (click)="mainmenu.close();">
+        <mat-icon>description</mat-icon> Résumé
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- primary content -->
+  <div>
+
+    <div #root="dir" dir="ltr" class="app-content mat-typography" [@fadeAnimation]="true">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>

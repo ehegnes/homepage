@@ -1,0 +1,32 @@
+#avatar {
+  height: 256px;
+  width: 256px;
+  border-radius: 50%;
+}
+
+#email {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  float: left;
+  text-align: left;
+}
+
+.item {
+  align-items: center !important;
+  margin: 0 10px 30px;
+  place-content: center !important;
+}
+
+.card-item-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.grid-filler {
+  height: 0;
+  width: 220px;
+}
+
+.header {
+  margin-top: 32px !important;
+}

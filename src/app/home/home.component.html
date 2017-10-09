@@ -1,0 +1,60 @@
+<!-- Into content -->
+<div fxLayout
+     fxLayout.lt-md="column"
+     fxLayoutAlign="space-around"
+     fxLayoutAlign.lt-md="center center"
+     fxLayoutGap="32px">
+  <img id="avatar" src="/assets/me.png"/>
+  <mat-card fxFlex>
+    <mat-card-title>Eric Hegnes</mat-card-title>
+    <mat-card-subtitle>About Me</mat-card-subtitle>
+    <mat-card-content>
+      I am an undergraduate Computer Science student at
+      <a href="https://drexel.edu/">Drexel University</a>. My current
+      professional interests lie with an education-focused startup,
+      <a href="https://courserootsapp.com/" class="green">Course Roots,
+        Inc.</a>, founded by Artem Aristov. My personal interests in Computer
+      Science concern operating systems (Linux), functional programming, and
+      systems programming.
+    </mat-card-content>
+    <div fxLayout="column"
+         fxLayoutGap="5px">
+      <div fxLayout
+         fxLayoutGap="5px"
+         fxLayoutAlign="start center">
+        <mat-icon>email</mat-icon>
+        <div id="email">moc.liamg<span>@</span>sengeh.cire</div>
+      </div>
+      <div fxLayout
+         fxLayoutGap="5px"
+         fxLayoutAlign="start center">
+        <mat-icon>location_on</mat-icon>
+        <div>Philadelphia, PA</div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<h1 class="header">Proficiencies</h1>
+<div fxLayout
+    fxLayoutWrap="wrap"
+    fxLayoutAlign="space-around">
+  <!--
+     -TODO: fix ripple moving content
+     -->
+  <mat-card class="item"
+            *ngFor="let p of proficiencies"
+            mat-ripple
+            fxLayout
+            fxLayoutAlign="center center"
+            fxFlex="220px"
+            fxAlign="start">
+    <img class="card-item-icon" src="{{p?.logo}}">
+    <div fxFlex></div>
+    <mat-card-title>{{p.name}}</mat-card-title>
+  </mat-card>
+  <div class="item grid-filler"></div>
+  <div class="item grid-filler"></div>
+  <div class="item grid-filler"></div>
+  <div class="item grid-filler"></div>
+</div>

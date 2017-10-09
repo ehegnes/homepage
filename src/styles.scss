@@ -1,0 +1,44 @@
+@import '~@angular/material/theming';
+
+html,
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  // Helps fonts on OSX looks more consistent with other systems
+  // Isn't currently in button styles due to performance concerns
+  * {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+body > app-root > mat-toolbar > div {
+  width: inherit;
+}
+
+h1 {
+  margin: 0;
+}
+
+body > app-root > mat-sidenav-container > mat-sidenav > mat-nav-list > a > div > mat-icon {
+  padding-right: 8px;
+}
+
+a {
+  color: mat-color($mat-blue, 700);
+  text-decoration: none;
+
+  &:hover {
+    color: mat-color($mat-blue, 400);
+  }
+}
+
+.green {
+  color: mat-color($mat-green, 700);
+
+  &:hover {
+    color: mat-color($mat-green, 400);
+  }
+}
