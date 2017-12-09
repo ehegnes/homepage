@@ -8,17 +8,16 @@
   <mat-card fxFlex>
     <mat-card-title>Eric Hegnes</mat-card-title>
     <mat-card-subtitle>About Me</mat-card-subtitle>
-    <mat-card-content>
-      I am an undergraduate Computer Science student at
-      <a href="https://drexel.edu/">Drexel University</a>. My current
-      professional interests lie with an education-focused startup,
-      <a href="https://courserootsapp.com/" class="green">Course Roots,
-        Inc.</a>, founded by Artem Aristov. My personal interests in Computer
-      Science concern operating systems (Linux), functional programming, and
-      systems programming.
+    <mat-card-content class="smooth-text">
+      I am an undergraduate Computer Science student at <a
+        href="https://drexel.edu/">Drexel University</a>. My current
+      professional interests lie with an education-focused startup, <a
+        href="https://courserootsapp.com/" class="green">Course Roots,
+        Inc</a>. My personal interests in Computer Science concern operating
+      systems (Linux), functional programming, and systems programming.
     </mat-card-content>
     <div fxLayout="column"
-         fxLayoutGap="5px">
+         fxLayoutGap="8px">
       <div fxLayout
          fxLayoutGap="5px"
          fxLayoutAlign="start center">
@@ -35,10 +34,28 @@
   </mat-card>
 </div>
 
+<h1 class="header">Current Work</h1>
+<mat-card>
+  <mat-card-header>
+    <img mat-card-avatar src="https://courserootsapp.com/favicon.png">
+    <mat-card-title>Course Roots</mat-card-title>
+    <mat-card-subtitle>CTO / Lead Developer</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    Course Roots is an educational platform intended to increase collaboration,
+    ease accessibility, and foster out-of-classroom involvement. Our vision is
+    to deliver innovative technologies to improve preparatory schools and
+    higher education. Students and faculty can utilize Course Roots to improve
+    comprehension, collaboration, student-faculty communication, and gain
+    insights on students’ pain points regarding class material.
+  </mat-card-content>
+</mat-card>
+
 <h1 class="header">Proficiencies</h1>
-<div fxLayout
-    fxLayoutWrap="wrap"
-    fxLayoutAlign="space-around">
+<div class="grid-list"
+     fxLayout
+     fxLayoutWrap="wrap"
+     fxLayoutAlign="space-between">
   <!--
      -TODO: fix ripple moving content
      -->
@@ -47,12 +64,14 @@
             mat-ripple
             fxLayout
             fxLayoutAlign="center center"
-            fxFlex="220px"
+            fxLayoutGap="16px"
+            fxFlex="240px"
             fxAlign="start">
     <img class="card-item-icon" src="{{p?.logo}}">
-    <div fxFlex></div>
-    <mat-card-title>{{p.name}}</mat-card-title>
+    <mat-card-title fxFlex>{{p.name}}</mat-card-title>
   </mat-card>
+  <div class="item grid-filler"></div>
+  <div class="item grid-filler"></div>
   <div class="item grid-filler"></div>
   <div class="item grid-filler"></div>
   <div class="item grid-filler"></div>

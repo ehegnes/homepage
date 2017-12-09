@@ -27,18 +27,18 @@ body > app-root > mat-sidenav-container > mat-sidenav > mat-nav-list > a > div >
 }
 
 a {
-  color: mat-color($mat-blue, 700);
+  color: mat-color($mat-blue, 500);
   text-decoration: none;
 
   &:hover {
-    color: mat-color($mat-blue, 400);
+    color: mat-color($mat-blue, 300);
   }
 }
 
 .green {
-  color: mat-color($mat-green, 700);
+  color: mat-color($mat-green, 500);
 
   &:hover {
-    color: mat-color($mat-green, 400);
+    color: mat-color($mat-green, 300);
   }
 }

@@ -13,20 +13,42 @@
 
 .item {
   align-items: center !important;
+  height: 85px;
   margin: 0 10px 30px;
+  padding: -5px;
   place-content: center !important;
 }
 
 .card-item-icon {
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
   height: 40px;
   width: 40px;
 }
 
 .grid-filler {
   height: 0;
-  width: 220px;
+  width: 240px;
+}
+
+.grid-list {
+  margin: 0 -10px;
 }
 
 .header {
   margin-top: 32px !important;
+}
+
+.smooth-text {
+  hyphens: auto;
+  overflow: auto;
+  text-align: justify;
+  word-break: break-word;
+}
+
+img.mat-card-avatar {
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
 }

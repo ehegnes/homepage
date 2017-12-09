@@ -21,9 +21,17 @@
 }
 
 @media (max-width: 600px) {
+  mat-sidenav {
+    width: calc(100vw) !important;
+  }
+
   mat-sidenav-container {
     top: 56px !important;
   }
+}
+
+mat-sidenav {
+  width: 200px;
 }
 
 mat-sidenav-container {
