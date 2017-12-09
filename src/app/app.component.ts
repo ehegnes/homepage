@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     private router: Router,
   ) {
     router.events.subscribe((url: any) => {
-      this.formattedRoute = decodeURI(router.url.substring(1));
+      this.formattedRoute = decodeURI(router.url.substring(1).replace('-',' '));
     });
   }
 

@@ -1,0 +1,81 @@
+<div fxLayout="column"
+     fxLayoutGap="32px">
+  <mat-card>
+    <mat-card-title>My Setup</mat-card-title>
+    <mat-card-content>
+      The following is a collection of the softwares and technologies that I value and use.
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Gentoo Linux -->
+  <div fxLayout
+       fxLayoutGap="32px"
+       fxLayout.lt-md="column"
+       fxLayoutAlign.lt-md="center center">
+    <img class="logo" src="https://www.gentoo.org/assets/img/logo/gentoo-signet.svg">
+    <mat-card fxFlex>
+      <mat-card-title>Gentoo Linux</mat-card-title>
+      <mat-card-subtitle><a href="https://gentoo.org/">gentoo.org</a></mat-card-subtitle>
+      <mat-card-content>
+        Gentoo Linux is a source-based Linux distribution. Every package
+        installed package is compiled from source using the Portage package
+        manager. <code>USE</code> flags allow a user to specify exactly what
+        should be enabled in each package.
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- DWM -->
+  <div fxLayout
+       fxLayoutGap="32px"
+       fxLayoutGap.lt-md="0"
+       fxLayout.lt-md="column-reverse"
+       fxLayoutAlign.lt-md="center center">
+    <mat-card fxFlex>
+      <mat-card-title>DWM (Dynamic Window Manager)</mat-card-title>
+      <mat-card-subtitle><a href="https://dwm.suckless.org/">dwm.suckless.org</a></mat-card-subtitle>
+      <mat-card-content>
+        <code>dwm</code> is a dynamic window manager for X. It manages windows
+        in tiled, monocle and floating layouts. All of the layouts can be
+        applied dynamically, optimising the environment for the application in
+        use and the task performed. <code>dwm</code>is only a single binary,
+        and its source code is intended to never exceed 2000 SLOC.
+      </mat-card-content>
+    </mat-card>
+    <img class="logo" src="https://dwm.suckless.org/dwm.svg">
+  </div>
+
+  <!-- Neovim -->
+  <div fxLayout
+       fxLayoutGap="32px"
+       fxLayout.lt-md="column"
+       fxLayoutAlign.lt-md="center center">
+    <img class="logo" src="https://neovim.io/logos/neovim-mark.svg">
+    <mat-card fxFlex>
+      <mat-card-title>Neovim</mat-card-title>
+      <mat-card-subtitle><a href="https://neovim.io/">neovim.io</a></mat-card-subtitle>
+      <mat-card-content>
+        Neovim is a refactor, and sometimes redactor, in the tradition of Vim
+        (which itself derives from Stevie). It is not a rewrite but a
+        continuation and extension of Vim. Many clones and derivatives exist,
+        some very clever—but none are Vim. Neovim is built for users who want
+        the good parts of Vim, and more.
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- mpv -->
+  <div fxLayout
+       fxLayoutGap="32px"
+       fxLayout.lt-md="column-reverse"
+       fxLayoutAlign.lt-md="center center">
+    <mat-card fxFlex>
+      <mat-card-title>mpv</mat-card-title>
+      <mat-card-subtitle><a href="https://mpv.io/">mpv.io</a></mat-card-subtitle>
+      <mat-card-content>
+        <code>mpv</code> is a fork of <code>mplayer2</code>and <code>MPlayer</code>. It shares some features with the former projects while introducing many more.
+      </mat-card-content>
+    </mat-card>
+    <img class="logo" src="https://mpv.io/images/mpv-logo-128-0baae5aa.png">
+  </div>
+</div>

@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'résumé',
     loadChildren: 'app/resume/resume.module#ResumeModule',
   },
+  {
+    path: 'my-setup',
+    loadChildren: 'app/my-setup/my-setup.module#MySetupModule',
+  },
 ];
 
 @NgModule({

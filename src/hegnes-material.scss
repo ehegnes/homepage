@@ -39,6 +39,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
     .mat-card {
       background-color: mat-color($primary);
+      color: mat-color($foreground, text);
     }
   }
 
